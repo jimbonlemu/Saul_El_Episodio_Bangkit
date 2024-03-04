@@ -8,26 +8,133 @@
     android:layout_marginTop="7dp"
     android:layout_marginEnd="7dp"
     android:layout_marginBottom="7dp"
-    android:padding="20dp"
     app:cardCornerRadius="20dp"
     app:strokeColor="@color/saul_yellow"
-    app:strokeWidth="2.5dp">
+    app:strokeWidth="4dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp">
 
-        <ImageView
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_content_img"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/rounded_view" />
+
+            <TextView
+                android:id="@+id/tv_title_episode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/saul_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="@tools:sample/lorem" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <TextView
+            android:id="@+id/comp_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/comp_rating"
+            app:layout_constraintStart_toEndOf="@+id/comp_rating"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            tools:text="@tools:sample/us_zipcodes" />
+
+        <TextView
+            android:id="@+id/comp_season"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/season"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comp_rating" />
+
+        <TextView
+            android:id="@+id/tv_season"
+            android:layout_width="38dp"
+            android:layout_height="20dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/comp_season"
+            app:layout_constraintStart_toEndOf="@+id/comp_season"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating"
+            tools:text="@tools:sample/us_zipcodes" />
+
+        <TextView
+            android:id="@+id/comp_episode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/episode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comp_season" />
+
+        <TextView
+            android:id="@+id/tv_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="@+id/comp_episode"
+            app:layout_constraintStart_toEndOf="@+id/comp_episode"
+            app:layout_constraintTop_toBottomOf="@+id/tv_season"
+            tools:text="@tools:sample/us_zipcodes" />
+
+        <TextView
+            android:id="@+id/comp_synopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/synopsis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comp_episode" />
+
+        <TextView
+            android:id="@+id/tv_synopsis"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comp_synopsis"
+            tools:text="@tools:sample/lorem/random" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </com.google.android.material.card.MaterialCardView>
