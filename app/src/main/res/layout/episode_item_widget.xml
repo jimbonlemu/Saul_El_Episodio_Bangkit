@@ -72,6 +72,7 @@
 
         <TextView
             android:id="@+id/tv_rating"
+            android:layout_marginStart="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/comp_rating"
@@ -91,7 +92,7 @@
             android:id="@+id/tv_season"
             android:layout_width="38dp"
             android:layout_height="20dp"
-
+            android:layout_marginStart="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/comp_season"
             app:layout_constraintStart_toEndOf="@+id/comp_season"
             app:layout_constraintTop_toBottomOf="@+id/tv_rating"
@@ -109,7 +110,7 @@
             android:id="@+id/tv_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginStart="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/comp_episode"
             app:layout_constraintStart_toEndOf="@+id/comp_episode"
             app:layout_constraintTop_toBottomOf="@+id/tv_season"

@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Saul El Episodio</string>
-    <string name="synopsis">Synopsis : </string>
-    <string name="rating">Rating : </string>
-    <string name="season">Season : </string>
-    <string name="episode">Episode : </string>
+    <string name="synopsis">Synopsis :</string>
+    <string name="rating">Rating :</string>
+    <string name="season">Season :</string>
+    <string name="episode">Episode :</string>
 
     <string-array name="list_image">
         <item>https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/collage-maker-05-apr-2023-11-29-pm-7208.jpg?q=50&amp;fit=crop&amp;w=750&amp;dpr=1.5</item>
