@@ -9,7 +9,7 @@ open class BackActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_arrow_back_ios_new_24)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
