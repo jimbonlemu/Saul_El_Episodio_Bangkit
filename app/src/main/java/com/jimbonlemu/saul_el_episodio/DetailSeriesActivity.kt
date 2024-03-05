@@ -5,15 +5,19 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 
+
 @Suppress("DEPRECATION")
-class DetailSeriesActivity : AppCompatActivity() {
+class DetailSeriesActivity : BackActivity() {
     companion object {
         const val SERIES_ARGS = "series_args"
     }
+
+    private lateinit var binding: DetailSeriesActivity
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,13 +48,15 @@ class DetailSeriesActivity : AppCompatActivity() {
                             "Title Series : ${seriesArgs.title}\n" +
                                     "Series Season : ${seriesArgs.season}\n" +
                                     "Rating Series : ${seriesArgs.rating}\n" +
-                                    "Series Episode : ${seriesArgs.episode}\n"+
+                                    "Series Episode : ${seriesArgs.episode}\n" +
                                     "Synopsis Series : ${seriesArgs.synopsis}\n"
                         ).setType("text/plain"), null
                     )
                 )
             }
         }
+
+
     }
 
 

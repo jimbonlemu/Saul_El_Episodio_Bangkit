@@ -21,6 +21,7 @@
             tools:src="@tools:sample/avatars" />
 
         <include
+            android:layout_marginTop="10dp"
             android:id="@+id/include"
             layout="@layout/layout_detail"
             android:layout_width="match_parent"
