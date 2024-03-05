@@ -3,11 +3,9 @@ package com.jimbonlemu.saul_el_episodio
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,15 +52,9 @@ class MainActivity : AppCompatActivity() {
             ListSeriesAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Series) {
                 startActivity(
-                    Intent(this@MainActivity, DetailSeriesActivity::class.java).putExtra(
-                        DetailSeriesActivity.SERIES_ARGS,
-                        data
-                    )
+                    Intent(this@MainActivity, DetailSeriesActivity::class.java).putExtra(DetailSeriesActivity.SERIES_ARGS, data)
                 )
             }
-
-
-
         })
 
     }

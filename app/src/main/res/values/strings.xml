@@ -5,6 +5,7 @@
     <string name="season">Season</string>
     <string name="episode">Episode</string>
     <string name="share">Share</string>
+    <string name="about">About Developer</string>
 
     <string-array name="list_image">
         <item>https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/collage-maker-05-apr-2023-11-29-pm-7208.jpg?q=50&amp;fit=crop&amp;w=750&amp;dpr=1.5</item>
@@ -34,16 +35,16 @@
 
 
     <string-array name="list_rating">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+        <item>8.3</item>
+        <item>9.7</item>
+        <item>9.4</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.4</item>
+        <item>9.7</item>
+        <item>9.8</item>
+        <item>9.9</item>
     </string-array>
 
     <string-array name="list_season">
@@ -112,8 +113,5 @@ With a powerhouse performance by Michael McKean, Chuck is formally removed from 
             \"Plan and Execution\" follows Howard Hamlin\'s last days. A humiliated Howard gets framed as a drug addict by Jimmy and Kim, after being gaslighted into thinking a lawyer in the Sandpiper case is taking bribes. Howard arrives to confront the pair at their home, only to cross paths with Lalo visiting his lawyers. In response, Lalo shoots and kills Howard.\n
 More than any other moment in the show, Howard\'s death marks Jimmy\'s irreversible transition into the Saul Goodman persona. The destruction of Howard\'s life and reputation forces Kim to sever ties with Jimmy, causing him to lose his one only connection outside the criminal underworld. \"Plan and Execution\" brings Howard\'s relationship with Jimmy and Kim to a brutal conclusion, finally delivering on Kim and Jimmy\'s various plots against him over multiple seasons.
         </item>
-
     </string-array>
-
-
 </resources>
