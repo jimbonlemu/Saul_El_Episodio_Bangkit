@@ -34,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
                     Intent(this@SplashActivity, MainActivity::class.java)
                 )
                 finish()
-            }, 1000)
+            }, 0)
         }
         introPlayer.start()
     }
