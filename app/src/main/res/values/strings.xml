@@ -1,9 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Saul El Episodio</string>
-    <string name="synopsis">Synopsis :</string>
-    <string name="rating">Rating :</string>
-    <string name="season">Season :</string>
-    <string name="episode">Episode :</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="rating">Rating</string>
+    <string name="season">Season</string>
+    <string name="episode">Episode</string>
+    <string name="share">Share</string>
 
     <string-array name="list_image">
         <item>https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/collage-maker-05-apr-2023-11-29-pm-7208.jpg?q=50&amp;fit=crop&amp;w=750&amp;dpr=1.5</item>
@@ -73,42 +74,42 @@
 
 
     <string-array name="list_synopsis">
-       <item>\"Inflatable\" begins with a young Jimmy taking money from his father\'s cash register after an encounter with a con man. In the present day, Jimmy attempts to get himself fired from Davis &amp; Main without cause through several elaborate schemes. When he succeeds, Jimmy uses his signing bonus to start a law firm with Kim Wexler.
+       <item>\"Inflatable\" begins with a young Jimmy taking money from his father\'s cash register after an encounter with a con man. In the present day, Jimmy attempts to get himself fired from Davis &amp; Main without cause through several elaborate schemes. When he succeeds, Jimmy uses his signing bonus to start a law firm with Kim Wexler.\n
 \"Inflatable\" perfectly showcases the undeniable intellect behind Jimmy\'s crazy schemes. As Jimmy fills his closet with loud, colorful clothes, this episode marks the first steps toward the Saul Goodman persona. The episode also draws the connection between the persona and Jimmy\'s poor self-image, influenced by Chuck\'s lack of confidence in his abilities.
        </item>
         <item>
-            \"Rock and Hard Place\" marks the culmination of Nacho Varga\'s six-season arc of breaking away from the Salamanca cartel and gaining his freedom. In the episode, Nacho strikes a deal with Gus Fring that will guarantee his father\'s safety. In doing so, Nacho faces one final showdown with the Salamancas, under the false impression that Nacho murdered Lalo.
+            \"Rock and Hard Place\" marks the culmination of Nacho Varga\'s six-season arc of breaking away from the Salamanca cartel and gaining his freedom. In the episode, Nacho strikes a deal with Gus Fring that will guarantee his father\'s safety. In doing so, Nacho faces one final showdown with the Salamancas, under the false impression that Nacho murdered Lalo.\n
 \"Rock and Hard Place\" certifies Nacho\'s place among the very best Better Call Saul characters, giving him a redemption arc similar to Jesse Pinkman in Breaking Bad. Previously, cartel members often lacked the dimension given to the series\' other characters. Guided by Michael Mando\'s incredible performance, Nacho\'s final appearance ends on a darkly victorious note.
         </item>
         <item>
-            \"Five-O\" follows Mike Ehrmantraut, who hires Jimmy McGill as his lawyer after being taken in for questioning. The police involved are Mike\'s his former co-workers, investigating the murder of an officer who had ties to Mike\'s deceased son. The episode reveals details of Mike\'s old life in Philadelphia that led him to relocate to Albuquerque.
+            \"Five-O\" follows Mike Ehrmantraut, who hires Jimmy McGill as his lawyer after being taken in for questioning. The police involved are Mike\'s his former co-workers, investigating the murder of an officer who had ties to Mike\'s deceased son. The episode reveals details of Mike\'s old life in Philadelphia that led him to relocate to Albuquerque.\n
         \"Five-O\" explores a previously unknown portion of Mike Ehrmantraut\'s backstory, highlighting his role in corrupting his own police force. The episode\'s plot reveals significantly enrich Mike\'s ties to the cartel and his closed-off demeanor. It also adds a new dimension to Mike\'s relationship with his granddaughter and his son\'s widow, Stacey.
         </item>
-        <item>The episode \"Point and Shoot\" takes place over the course of one very intense night, as Lalo Salamanca takes Jimmy and Kim hostage. Kim, given a camera and pistol, is tasked with tracking down and murdering Gus Fring. Jimmy is tortured in the apartment next to the corpse of the recently murdered Howard Hamlin.
+        <item>The episode \"Point and Shoot\" takes place over the course of one very intense night, as Lalo Salamanca takes Jimmy and Kim hostage. Kim, given a camera and pistol, is tasked with tracking down and murdering Gus Fring. Jimmy is tortured in the apartment next to the corpse of the recently murdered Howard Hamlin.\n
 In his final appearance, Tony Dalton ends Lalo\'s arc. Cementing Lalo as the Breaking Bad universe\'s best villain, he proves captivating and terrifying in equal measure. Lalo\'s surprising murder sets the stage for Breaking Bad\'s cautious, calculated Gus. Lalo and Howard\'s joint burial under Gus\' lab makes for gorgeously macabre imagery.
         </item>
         <item>
-            Tasked with picking up Lalo\'s $7 million bail at the border, Saul Goodman goes on an odyssey through the desert in \"Bagman.\" When Saul gets targeted by gunmen attempting to take Lalo\'s money, Mike rescues him. The pair are forced to survive overnight together, and Mike confronts Saul about involving Kim in \"the game.\"
+            Tasked with picking up Lalo\'s $7 million bail at the border, Saul Goodman goes on an odyssey through the desert in \"Bagman.\" When Saul gets targeted by gunmen attempting to take Lalo\'s money, Mike rescues him. The pair are forced to survive overnight together, and Mike confronts Saul about involving Kim in \"the game.\"\n
 Mike\'s portrayal in Better Call Saul expands on Breaking Bad, portraying him as a man forced to confront the weight of his own grief and suppressed guilt. As Kim meets with Lalo, Mike forces Saul to confront his point of no return. The parallel journeys brilliantly showcase Saul facing his own corruption and the endangerment of what he loves.
         </item>
         <item>
-            Taking place immediately after \"Bagman,\" "Bad Choice Road" portrays an exhausted Saul who\'s narrowly escaped death in the desert. After Lalo is freed, he investigates Saul\'s supposed journey and realizes he neglected to inform him that rivals targeted him. Lalo shows up at his apartment and questions Saul\'s story, but Kim successfully argues Saul\'s innocence to Lalo.
+            Taking place immediately after \"Bagman,\" "Bad Choice Road" portrays an exhausted Saul who\'s narrowly escaped death in the desert. After Lalo is freed, he investigates Saul\'s supposed journey and realizes he neglected to inform him that rivals targeted him. Lalo shows up at his apartment and questions Saul\'s story, but Kim successfully argues Saul\'s innocence to Lalo.\n
             The scene where Lalo forces Saul to recount his story is the most intense in the whole series. Even without physical action, the electrifying chemistry between the actors makes this exchange the most delicate and dangerous in the Breaking Bad universe. \"Bad Choice Road\" marks a darker turn for Kim\'s lawyering, as she successfully pleads Saul\'s case to the cartel\'s unpredictable leader.
 
         </item>
-        <item>Lalo certifies his place as one of the most hellacious, charming villains in TV history in \"Something Unforgivable,\" as he successfully survives an organized assassination attempt by Gus Fring. Nacho sets Lalo\'s home ablaze in a frenzy that kills most of Lalo\'s house members, forcing Lalo to fake his own death. Meanwhile, Kim quits Schweikart &amp; Cokely to pursue public defense and support Jimmy by sabotaging Howard Hamlin\'s role in the Sandpiper case.
+        <item>Lalo certifies his place as one of the most hellacious, charming villains in TV history in \"Something Unforgivable,\" as he successfully survives an organized assassination attempt by Gus Fring. Nacho sets Lalo\'s home ablaze in a frenzy that kills most of Lalo\'s house members, forcing Lalo to fake his own death. Meanwhile, Kim quits Schweikart &amp; Cokely to pursue public defense and support Jimmy by sabotaging Howard Hamlin\'s role in the Sandpiper case.\n
 The season 5 finale, \"Something Unforgivable\" exposes parallels between Lalo and Kim, as both shift toward a darker, unprecedented side. Lalo\'s home invasion offers an insight into the power of Lalo\'s aggression, typically hidden by his unsettling charm. While the stage is set for the Saul Goodman of Breaking Bad, the episode simultaneously shakes up viewers\' expectations for season 6.
         </item>
         <item>
-            \"Chicanery\" portrays the final stand-off between Chuck and Jimmy McGill in a court of law. Using a series of Slippin\' Jimmy schemes, Jimmy successfully disproves his brother\'s sensitivity to electronics by secretly planting a cell phone on him. This reveal causes an outburst from Chuck where he asserts his sanity by going on a tirade against Jimmy\'s morality.
+            \"Chicanery\" portrays the final stand-off between Chuck and Jimmy McGill in a court of law. Using a series of Slippin\' Jimmy schemes, Jimmy successfully disproves his brother\'s sensitivity to electronics by secretly planting a cell phone on him. This reveal causes an outburst from Chuck where he asserts his sanity by going on a tirade against Jimmy\'s morality.\n
 With a powerhouse performance by Michael McKean, Chuck is formally removed from Jimmy\'s world, setting the pieces in place for Saul Goodman\'s rise. Chuck\'s supposed EHS works as a perfect metaphor for the fragility of his self-image in relation to Jimmy. Additionally, \"Chicanery\" marks the death of Chuck\'s professional facade in the courtroom where he once professed moral and intellectual dominance over his brother.
         </item>
         <item>
-            Despite living in witness protection under the alias of Gene Takavic, Jimmy gets discovered and arrested in \"Saul Gone.\" Jimmy takes to the stand and takes full blame for Howard Hamlin\'s death and Walter White\'s rise, absolving Kim of her role in creating Saul Goodman. After Jimmy gets sentenced to 80 years in prison, the pair reunite to share a cigarette once more.
+            Despite living in witness protection under the alias of Gene Takavic, Jimmy gets discovered and arrested in \"Saul Gone.\" Jimmy takes to the stand and takes full blame for Howard Hamlin\'s death and Walter White\'s rise, absolving Kim of her role in creating Saul Goodman. After Jimmy gets sentenced to 80 years in prison, the pair reunite to share a cigarette once more.\n
 \"Saul Gone\" is one of the best TV show finales of all time, re-aligning Jimmy McGill with his former personas as he comes to terms with his crimes. Jimmy\'s redemption arc suitably punishes his wrongdoings while evolving his character beyond his aliases. His reunion with Kim suitably flips his Breaking Bad characterization, making Jimmy an anti-Walter White.
         </item>
         <item>
-            \"Plan and Execution\" follows Howard Hamlin\'s last days. A humiliated Howard gets framed as a drug addict by Jimmy and Kim, after being gaslighted into thinking a lawyer in the Sandpiper case is taking bribes. Howard arrives to confront the pair at their home, only to cross paths with Lalo visiting his lawyers. In response, Lalo shoots and kills Howard.
+            \"Plan and Execution\" follows Howard Hamlin\'s last days. A humiliated Howard gets framed as a drug addict by Jimmy and Kim, after being gaslighted into thinking a lawyer in the Sandpiper case is taking bribes. Howard arrives to confront the pair at their home, only to cross paths with Lalo visiting his lawyers. In response, Lalo shoots and kills Howard.\n
 More than any other moment in the show, Howard\'s death marks Jimmy\'s irreversible transition into the Saul Goodman persona. The destruction of Howard\'s life and reputation forces Kim to sever ties with Jimmy, causing him to lose his one only connection outside the criminal underworld. \"Plan and Execution\" brings Howard\'s relationship with Jimmy and Kim to a brutal conclusion, finally delivering on Kim and Jimmy\'s various plots against him over multiple seasons.
         </item>
 

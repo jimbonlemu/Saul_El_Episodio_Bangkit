@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".DetailSeriesActivity">
 
+    <ImageView
+        android:id="@+id/iv_detail_image_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars" />
+
+    <include
+        layout="@layout/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_detail_image_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

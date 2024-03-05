@@ -1,10 +1,13 @@
 package com.jimbonlemu.saul_el_episodio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.ImageView
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity() {
 
@@ -50,13 +53,18 @@ class MainActivity : AppCompatActivity() {
         listSeriesAdapter.setOnItemClickCallback(object :
             ListSeriesAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Series) {
-                getToast(value = data)
+                startActivity(
+                    Intent(this@MainActivity, DetailSeriesActivity::class.java).putExtra(
+                        DetailSeriesActivity.SERIES_ARGS,
+                        data
+                    )
+                )
             }
+
+
 
         })
 
     }
-
-    private fun getToast(value: Series) = Toast.makeText(this, "This series is " + value.title, Toast.LENGTH_SHORT).show()
 
 }

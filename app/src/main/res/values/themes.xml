@@ -3,6 +3,12 @@
     <style name="Base.Theme.SaulElEpisodio" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/saul_black</item>
+        <item name="colorPrimaryVariant">@color/saul_red</item>
+        <item name="colorOnPrimary">@color/saul_yellow</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/saul_purple</item>
+
     </style>
 
     <style name="Theme.SaulElEpisodio" parent="Base.Theme.SaulElEpisodio" />
