@@ -19,16 +19,14 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-        val imageContent :ImageView= findViewById(R.id.iv_detail_image_content)
-
+        val imageContent :ImageView= findViewById(R.id.iv_splash_content_img)
+        
         imageContent.startAnimation(
             AnimationUtils.loadAnimation(
                 this@SplashActivity,
                 R.anim.anim_fade_in_to_out
             )
         )
-
 
         introPlayer = MediaPlayer.create(this, R.raw.intro_saul)
         introPlayer.setOnCompletionListener {

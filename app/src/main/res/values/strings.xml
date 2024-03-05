@@ -6,6 +6,12 @@
     <string name="episode">Episode</string>
     <string name="share">Share</string>
     <string name="about">About Developer</string>
+    <string name="email">Email</string>
+    <string name="dev_email">iqbaltech29@gmail.com</string>
+    <string name="name">Name</string>
+    <string name="dev_name">Mochamad Iqbal Maulana</string>
+    <string name="connect_github">Connect with me to Github</string>
+    <string name="conect_ig">Conect with me on Instagram</string>
 
     <string-array name="list_image">
         <item>https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/collage-maker-05-apr-2023-11-29-pm-7208.jpg?q=50&amp;fit=crop&amp;w=750&amp;dpr=1.5</item>

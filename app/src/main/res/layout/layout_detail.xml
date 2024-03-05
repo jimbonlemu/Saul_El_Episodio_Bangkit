@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/comp_season_layout_detail"
-        android:fontFamily="@font/diploma"
+        style="@style/StyledContentText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -19,7 +19,7 @@
         android:id="@+id/tv_season_layout_detail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/pricedow"
+        style="@style/StyledContentText2"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
 
     <TextView
         android:id="@+id/comp_rating_layout_detail"
-        android:fontFamily="@font/diploma"
+        style="@style/StyledContentText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/rating"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="@font/pricedow"
+        style="@style/StyledContentText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_season_layout_detail"
@@ -50,7 +50,7 @@
     <TextView
         android:id="@+id/comp_episode_layout_detail"
         android:layout_width="wrap_content"
-        android:fontFamily="@font/diploma"
+        style="@style/StyledContentText"
         android:layout_height="0dp"
         android:text="@string/episode"
         app:layout_constraintStart_toStartOf="@id/comp_rating_layout_detail"
@@ -63,7 +63,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
-        android:fontFamily="@font/pricedow"
+        style="@style/StyledContentText2"
         app:layout_constraintTop_toBottomOf="@id/tv_rating_layout_detail"
         tools:text="@tools:sample/us_zipcodes" />
 
@@ -72,16 +72,19 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/synopsis"
-        android:fontFamily="@font/diploma"
+        style="@style/StyledContentText"
         app:layout_constraintStart_toStartOf="@id/comp_episode_layout_detail"
         app:layout_constraintTop_toBottomOf="@+id/tv_episode_layout_detail" />
+
     <TextView
         android:id="@+id/tv_synopsis_layout_detail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_episode_layout_detail"

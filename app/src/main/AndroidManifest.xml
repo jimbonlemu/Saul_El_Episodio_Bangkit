@@ -14,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SaulElEpisodio"
         tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".BackActivity"
             android:exported="false" />
@@ -27,12 +27,11 @@
             android:name=".DetailSeriesActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
