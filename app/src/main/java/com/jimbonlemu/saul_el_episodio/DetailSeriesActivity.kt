@@ -19,7 +19,6 @@ class DetailSeriesActivity : BackActivity() {
 
     private lateinit var binding: DetailSeriesActivity
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_series)
@@ -32,14 +31,7 @@ class DetailSeriesActivity : BackActivity() {
         }
 
         if (seriesArgs != null) {
-            supportActionBar?.title = seriesArgs.title
-            Glide.with(this).load(seriesArgs.image).into(findViewById(R.id.iv_detail_image_content))
-            findViewById<TextView>(R.id.tv_season_layout_detail).text = seriesArgs.season
-            findViewById<TextView>(R.id.tv_rating_layout_detail).text =
-                seriesArgs.rating + " /10 IMDB"
-            findViewById<TextView>(R.id.tv_episode_layout_detail).text = seriesArgs.episode
-            findViewById<TextView>(R.id.tv_synopsis_layout_detail).text = seriesArgs.synopsis
-
+            setValueSeries(seriesArgs)
             findViewById<MaterialButton>(R.id.btn_detail_share).setOnClickListener {
                 startActivity(
                     Intent.createChooser(
@@ -56,4 +48,15 @@ class DetailSeriesActivity : BackActivity() {
             }
         }
     }
+
+    @SuppressLint("SetTextI18n")
+    private fun setValueSeries(seriesArgs: Series) {
+        supportActionBar?.title = seriesArgs.title
+        Glide.with(this).load(seriesArgs.image).into(findViewById(R.id.iv_detail_image_content))
+        findViewById<TextView>(R.id.tv_season_layout_detail).text = seriesArgs.season
+        findViewById<TextView>(R.id.tv_rating_layout_detail).text =seriesArgs.rating + " /10 IMDB"
+        findViewById<TextView>(R.id.tv_episode_layout_detail).text = seriesArgs.episode
+        findViewById<TextView>(R.id.tv_synopsis_layout_detail).text = seriesArgs.synopsis
+    }
+
 }

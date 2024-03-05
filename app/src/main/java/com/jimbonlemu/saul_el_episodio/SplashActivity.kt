@@ -19,9 +19,8 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        val imageContent :ImageView= findViewById(R.id.iv_splash_content_img)
-        
-        imageContent.startAnimation(
+
+        findViewById<ImageView>(R.id.iv_splash_content_img).startAnimation(
             AnimationUtils.loadAnimation(
                 this@SplashActivity,
                 R.anim.anim_fade_in_to_out
@@ -31,17 +30,11 @@ class SplashActivity : AppCompatActivity() {
         introPlayer = MediaPlayer.create(this, R.raw.intro_saul)
         introPlayer.setOnCompletionListener {
             Handler().postDelayed({
-               imageContent.startAnimation(
-                    AnimationUtils.loadAnimation(
-                        this@SplashActivity,
-                        R.anim.anim_zoom_in
-                    )
-                )
                 startActivity(
                     Intent(this@SplashActivity, MainActivity::class.java)
                 )
                 finish()
-            }, 0)
+            }, 1000)
         }
         introPlayer.start()
     }
