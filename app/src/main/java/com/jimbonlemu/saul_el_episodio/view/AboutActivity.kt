@@ -16,7 +16,6 @@ class AboutActivity : BackActivity("About Developer") {
         ActivityAboutBinding.inflate(layoutInflater).apply {
             setContentView(root)
             btnAboutGithub.setOnClickListener { implicitIntent(GITHUB_URL) }
-
             btnAboutInstagram.setOnClickListener {
                 try {
                     implicitIntentWithPackageInstagram(INSTAGRAM_INSTALLED_URL)
