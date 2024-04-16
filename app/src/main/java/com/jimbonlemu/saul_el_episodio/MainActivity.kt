@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jimbonlemu.saul_el_episodio.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,18 +16,18 @@ class MainActivity : AppCompatActivity() {
     private val listSeries = ArrayList<Series>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        ActivityMainBinding.inflate(layoutInflater).apply {
+            setContentView(root)
 
-        rvSeries = findViewById(R.id.rv_list_of_series)
-        rvSeries.setHasFixedSize(true)
+            rvSeries = rvListOfSeries
+            rvSeries.setHasFixedSize(true)
 
-        listSeries.addAll(getAllSeriesValue())
-        recycleListSeries()
-
+            listSeries.addAll(getAllSeriesValue())
+            recycleListSeries()
+        }
     }
 
     private fun getAllSeriesValue(): ArrayList<Series> {
-
         val listSeriesValue = ArrayList<Series>()
         for (i in resources.getStringArray(R.array.list_image).indices) {
             val seriesInPiece = Series(
@@ -61,7 +62,6 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         })
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -71,12 +71,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.action_about->{
+            R.id.action_about -> {
                 startActivity(Intent(this@MainActivity, AboutActivity::class.java))
             }
         }
-
         return super.onOptionsItemSelected(item)
     }
-
 }
