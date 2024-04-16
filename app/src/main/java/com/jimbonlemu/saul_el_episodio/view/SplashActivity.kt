@@ -10,10 +10,8 @@ import android.view.animation.AnimationUtils
 import com.jimbonlemu.saul_el_episodio.R
 import com.jimbonlemu.saul_el_episodio.databinding.ActivitySplashBinding
 
-@Suppress("DEPRECATION")
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ActivitySplashBinding.inflate(layoutInflater).apply {
@@ -31,6 +29,7 @@ class SplashActivity : AppCompatActivity() {
     private fun setSplashAnimation(): MediaPlayer {
         return MediaPlayer.create(this@SplashActivity, R.raw.intro_saul).apply {
             setOnCompletionListener {
+                @Suppress("DEPRECATION")
                 Handler().postDelayed({
                     startActivity(Intent(this@SplashActivity, MainActivity::class.java))
                     finish()

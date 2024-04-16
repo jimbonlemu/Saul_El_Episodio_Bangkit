@@ -18,7 +18,7 @@ class AboutActivity : BackActivity("About Developer") {
             btnAboutGithub.setOnClickListener { implicitIntent(GITHUB_URL) }
             btnAboutInstagram.setOnClickListener {
                 try {
-                    implicitIntentWithPackageInstagram(INSTAGRAM_INSTALLED_URL)
+                    implicitIntentWithPackageInstagram()
                 } catch (e: ActivityNotFoundException) {
                     implicitIntent(INSTAGRAM_URL)
                 }
@@ -30,11 +30,11 @@ class AboutActivity : BackActivity("About Developer") {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
     }
 
-    private fun implicitIntentWithPackageInstagram(urlToInstagram: String) {
+    private fun implicitIntentWithPackageInstagram() {
         startActivity(
             Intent(
                 Intent.ACTION_VIEW,
-                Uri.parse(urlToInstagram)
+                Uri.parse(INSTAGRAM_INSTALLED_URL)
             ).setPackage(INSTAGRAM_PACKAGE)
         )
     }
