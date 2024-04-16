@@ -5,21 +5,25 @@ import android.os.Bundle
 import android.view.MenuItem
 
 @Suppress("DEPRECATION")
-open class BackActivity : AppCompatActivity() {
+open class BackActivity(private val appBarTitle: String? = null) : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon)
+        appBarTitle?.let { setupAppBar(it) }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-                android.R.id.home -> {
+            android.R.id.home -> {
                 onBackPressed()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun setupAppBar(title: String) {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon)
+        supportActionBar?.title = title
     }
 }

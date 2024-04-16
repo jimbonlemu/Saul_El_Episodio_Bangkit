@@ -6,11 +6,10 @@ import android.net.Uri
 import android.os.Bundle
 import com.google.android.material.button.MaterialButton
 
-class AboutActivity : BackActivity() {
+class AboutActivity : BackActivity("About Developer") {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
-        supportActionBar?.title = "About Developer"
         findViewById<MaterialButton>(R.id.btn_about_github).setOnClickListener {
             implicitIntent("https://github.com/jimbonlemu")
         }
