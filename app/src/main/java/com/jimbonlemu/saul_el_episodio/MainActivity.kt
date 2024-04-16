@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jimbonlemu.saul_el_episodio.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvSeries: RecyclerView
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun recycleListSeries() {
-        with(rvSeries) {
+        rvSeries.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             val listSeriesAdapter = ListSeriesAdapter(listSeries)
             adapter = listSeriesAdapter
