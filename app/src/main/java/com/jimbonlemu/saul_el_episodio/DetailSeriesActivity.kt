@@ -1,15 +1,10 @@
 package com.jimbonlemu.saul_el_episodio
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.google.android.material.button.MaterialButton
-
+import com.jimbonlemu.saul_el_episodio.databinding.ActivityDetailSeriesBinding
 
 @Suppress("DEPRECATION")
 class DetailSeriesActivity : BackActivity() {
@@ -17,46 +12,59 @@ class DetailSeriesActivity : BackActivity() {
         const val SERIES_ARGS = "series_args"
     }
 
-    private lateinit var binding: DetailSeriesActivity
+    private val binding: ActivityDetailSeriesBinding by lazy {
+        ActivityDetailSeriesBinding.inflate(
+            layoutInflater
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_series)
+        binding.apply {
+            setContentView(root)
 
-        val seriesArgs = if (Build.VERSION.SDK_INT >= 33) {
+            val seriesArgs = if (Build.VERSION.SDK_INT >= 33) {
+                intent.getParcelableExtra(SERIES_ARGS, Series::class.java)
+            } else {
+                intent.getParcelableExtra(SERIES_ARGS)
+            }
 
-            intent.getParcelableExtra<Series>(SERIES_ARGS, Series::class.java)
-        } else {
-            intent.getParcelableExtra<Series>(SERIES_ARGS)
+            if (seriesArgs != null) {
+                setValueSeries(seriesArgs)
+                setActionButtonShare(seriesArgs)
+            }
         }
+    }
 
-        if (seriesArgs != null) {
-            setValueSeries(seriesArgs)
-            findViewById<MaterialButton>(R.id.btn_detail_share).setOnClickListener {
+    private fun ActivityDetailSeriesBinding.setValueSeries(seriesArgs: Series) {
+        supportActionBar?.title = seriesArgs.title
+        Glide.with(this@DetailSeriesActivity).load(seriesArgs.image).into(ivDetailImageContent)
+        with(include) {
+            with(seriesArgs) {
+                tvSeasonLayoutDetail.text = season
+                "$rating /10 IMDB".also { tvRatingLayoutDetail.text = it }
+                tvEpisodeLayoutDetail.text = episode
+                tvSynopsisLayoutDetail.text = synopsis
+            }
+        }
+    }
+
+    private fun ActivityDetailSeriesBinding.setActionButtonShare(seriesArgs: Series) {
+        btnDetailShare.setOnClickListener {
+            with(seriesArgs) {
                 startActivity(
                     Intent.createChooser(
                         Intent(Intent.ACTION_SEND).putExtra(
                             Intent.EXTRA_TEXT,
-                            "Title Series : ${seriesArgs.title}\n" +
-                                    "Series Season : ${seriesArgs.season}\n" +
-                                    "Rating Series : ${seriesArgs.rating}\n" +
-                                    "Series Episode : ${seriesArgs.episode}\n" +
-                                    "Synopsis Series : ${seriesArgs.synopsis}\n"
+                            "Title Series : ${title}\n" +
+                                    "Series Season : ${season}\n" +
+                                    "Rating Series : ${rating}\n" +
+                                    "Series Episode : ${episode}\n" +
+                                    "Synopsis Series : ${synopsis}\n"
                         ).setType("text/plain"), null
                     )
                 )
             }
         }
     }
-
-    @SuppressLint("SetTextI18n")
-    private fun setValueSeries(seriesArgs: Series) {
-        supportActionBar?.title = seriesArgs.title
-        Glide.with(this).load(seriesArgs.image).into(findViewById(R.id.iv_detail_image_content))
-        findViewById<TextView>(R.id.tv_season_layout_detail).text = seriesArgs.season
-        findViewById<TextView>(R.id.tv_rating_layout_detail).text =seriesArgs.rating + " /10 IMDB"
-        findViewById<TextView>(R.id.tv_episode_layout_detail).text = seriesArgs.episode
-        findViewById<TextView>(R.id.tv_synopsis_layout_detail).text = seriesArgs.synopsis
-    }
-
 }
