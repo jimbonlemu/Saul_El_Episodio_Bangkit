@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
 import com.jimbonlemu.saul_el_episodio.R
 import com.jimbonlemu.saul_el_episodio.databinding.ActivitySplashBinding
-
 
 @Suppress("DEPRECATION")
 @SuppressLint("CustomSplashScreen")
@@ -20,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         ActivitySplashBinding.inflate(layoutInflater).apply {
             setContentView(root)
-            findViewById<ImageView>(R.id.iv_splash_content_img).startAnimation(
+            ivSplashContentImg.startAnimation(
                 AnimationUtils.loadAnimation(
                     this@SplashActivity,
                     R.anim.anim_fade_in_to_out
