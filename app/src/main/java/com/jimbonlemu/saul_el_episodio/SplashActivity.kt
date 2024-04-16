@@ -8,39 +8,36 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.jimbonlemu.saul_el_episodio.databinding.ActivitySplashBinding
 
 
 @Suppress("DEPRECATION")
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private lateinit var introPlayer: MediaPlayer
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-
-        findViewById<ImageView>(R.id.iv_splash_content_img).startAnimation(
-            AnimationUtils.loadAnimation(
-                this@SplashActivity,
-                R.anim.anim_fade_in_to_out
-            )
-        )
-
-        introPlayer = MediaPlayer.create(this, R.raw.intro_saul)
-        introPlayer.setOnCompletionListener {
-            Handler().postDelayed({
-                startActivity(
-                    Intent(this@SplashActivity, MainActivity::class.java)
+        ActivitySplashBinding.inflate(layoutInflater).apply {
+            setContentView(root)
+            findViewById<ImageView>(R.id.iv_splash_content_img).startAnimation(
+                AnimationUtils.loadAnimation(
+                    this@SplashActivity,
+                    R.anim.anim_fade_in_to_out
                 )
-                finish()
-            }, 0)
+            )
+            setSplashAnimation()
         }
-        introPlayer.start()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        introPlayer.release()
+    private fun setSplashAnimation(): MediaPlayer {
+        return MediaPlayer.create(this@SplashActivity, R.raw.intro_saul).apply {
+            setOnCompletionListener {
+                Handler().postDelayed({
+                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    finish()
+                }, 0)
+            }
+            start()
+        }
     }
 }
