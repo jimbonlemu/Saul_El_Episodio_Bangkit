@@ -1,4 +1,4 @@
-package com.jimbonlemu.saul_el_episodio
+package com.jimbonlemu.saul_el_episodio.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.jimbonlemu.saul_el_episodio.R
+import com.jimbonlemu.saul_el_episodio.data.Series
 
 class ListSeriesAdapter(private val listSeries: ArrayList<Series>) :
     RecyclerView.Adapter<ListSeriesAdapter.ListViewHolder>() {

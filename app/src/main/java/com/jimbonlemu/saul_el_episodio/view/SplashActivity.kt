@@ -1,4 +1,4 @@
-package com.jimbonlemu.saul_el_episodio
+package com.jimbonlemu.saul_el_episodio.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.jimbonlemu.saul_el_episodio.R
 import com.jimbonlemu.saul_el_episodio.databinding.ActivitySplashBinding
 
 
@@ -35,9 +36,13 @@ class SplashActivity : AppCompatActivity() {
                 Handler().postDelayed({
                     startActivity(Intent(this@SplashActivity, MainActivity::class.java))
                     finish()
-                }, 0)
+                }, SPLASH_SCREEN_DELAY)
             }
             start()
         }
+    }
+
+    companion object {
+        private const val SPLASH_SCREEN_DELAY: Long = 0
     }
 }

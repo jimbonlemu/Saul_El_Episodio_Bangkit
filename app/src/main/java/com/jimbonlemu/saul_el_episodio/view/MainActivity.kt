@@ -1,4 +1,4 @@
-package com.jimbonlemu.saul_el_episodio
+package com.jimbonlemu.saul_el_episodio.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,9 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jimbonlemu.saul_el_episodio.R
+import com.jimbonlemu.saul_el_episodio.adapter.ListSeriesAdapter
+import com.jimbonlemu.saul_el_episodio.data.Series
 import com.jimbonlemu.saul_el_episodio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

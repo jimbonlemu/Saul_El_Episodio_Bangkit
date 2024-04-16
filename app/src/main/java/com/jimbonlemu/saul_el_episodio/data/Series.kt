@@ -1,4 +1,4 @@
-package com.jimbonlemu.saul_el_episodio
+package com.jimbonlemu.saul_el_episodio.data
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,9 +1,10 @@
-package com.jimbonlemu.saul_el_episodio
+package com.jimbonlemu.saul_el_episodio.view
 
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.jimbonlemu.saul_el_episodio.data.Series
 import com.jimbonlemu.saul_el_episodio.databinding.ActivityDetailSeriesBinding
 
 @Suppress("DEPRECATION")
@@ -39,7 +40,7 @@ class DetailSeriesActivity : BackActivity() {
     private fun ActivityDetailSeriesBinding.setValueSeries(seriesArgs: Series) {
         supportActionBar?.title = seriesArgs.title
         Glide.with(this@DetailSeriesActivity).load(seriesArgs.image).into(ivDetailImageContent)
-        with(include) {
+        with(layoutDetailItem) {
             with(seriesArgs) {
                 tvSeasonLayoutDetail.text = season
                 "$rating /10 IMDB".also { tvRatingLayoutDetail.text = it }

@@ -15,19 +15,19 @@
         android:theme="@style/Theme.SaulElEpisodio"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BackActivity"
+            android:name=".view.BackActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".view.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailSeriesActivity"
+            android:name=".view.DetailSeriesActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.SplashActivity"
             android:theme="@style/Theme.Material3.DayNight.NoActionBar"
             android:exported="true">
             <intent-filter>

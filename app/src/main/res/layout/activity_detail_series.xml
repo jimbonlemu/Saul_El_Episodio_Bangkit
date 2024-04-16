@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailSeriesActivity">
+    tools:context=".view.DetailSeriesActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 
         <include
             android:layout_marginTop="10dp"
-            android:id="@+id/include"
+            android:id="@+id/layoutDetailItem"
             layout="@layout/layout_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/include" />
+            app:layout_constraintTop_toBottomOf="@+id/layoutDetailItem" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
