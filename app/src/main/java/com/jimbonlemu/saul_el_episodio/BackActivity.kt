@@ -17,13 +17,16 @@ open class BackActivity(private val appBarTitle: String? = null) : AppCompatActi
                 onBackPressed()
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
 
     private fun setupAppBar(title: String) {
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon)
-        supportActionBar?.title = title
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.back_icon)
+            this.title = title
+        }
     }
 }
