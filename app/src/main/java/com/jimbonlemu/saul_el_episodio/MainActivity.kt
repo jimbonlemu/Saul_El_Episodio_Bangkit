@@ -29,39 +29,46 @@ class MainActivity : AppCompatActivity() {
 
     private fun getAllSeriesValue(): ArrayList<Series> {
         val listSeriesValue = ArrayList<Series>()
-        for (i in resources.getStringArray(R.array.list_image).indices) {
-            val seriesInPiece = Series(
-                resources.getStringArray(R.array.list_image).getOrNull(i) ?: "",
-                resources.getStringArray(R.array.list_title_episodes).getOrNull(i) ?: "",
-                resources.getStringArray(R.array.list_rating).getOrNull(i) ?: "",
-                resources.getStringArray(R.array.list_season).getOrNull(i) ?: "",
-                resources.getStringArray(R.array.list_episode).getOrNull(i) ?: "",
-                resources.getStringArray(R.array.list_synopsis).getOrNull(i) ?: "",
-            )
-            listSeriesValue.add(seriesInPiece)
+        resources.apply {
+            val images = getStringArray(R.array.list_image)
+            val titles = getStringArray(R.array.list_title_episodes)
+            val ratings = getStringArray(R.array.list_rating)
+            val seasons = getStringArray(R.array.list_season)
+            val episodes = getStringArray(R.array.list_episode)
+            val synopses = getStringArray(R.array.list_synopsis)
+
+            for (i in images.indices) {
+                val seriesInPiece = Series(
+                    images.getOrNull(i) ?: "",
+                    titles.getOrNull(i) ?: "",
+                    ratings.getOrNull(i) ?: "",
+                    seasons.getOrNull(i) ?: "",
+                    episodes.getOrNull(i) ?: "",
+                    synopses.getOrNull(i) ?: ""
+                )
+                listSeriesValue.add(seriesInPiece)
+            }
+            return listSeriesValue
         }
-
-
-        return listSeriesValue
-
     }
 
     private fun recycleListSeries() {
-        rvSeries.layoutManager = LinearLayoutManager(this)
-        val listSeriesAdapter = ListSeriesAdapter(listSeries)
-        rvSeries.adapter = listSeriesAdapter
-
-        listSeriesAdapter.setOnItemClickCallback(object :
-            ListSeriesAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Series) {
-                startActivity(
-                    Intent(this@MainActivity, DetailSeriesActivity::class.java).putExtra(
-                        DetailSeriesActivity.SERIES_ARGS,
-                        data
+        with(rvSeries) {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            val listSeriesAdapter = ListSeriesAdapter(listSeries)
+            adapter = listSeriesAdapter
+            listSeriesAdapter.setOnItemClickCallback(object :
+                ListSeriesAdapter.OnItemClickCallback {
+                override fun onItemClicked(data: Series) {
+                    startActivity(
+                        Intent(this@MainActivity, DetailSeriesActivity::class.java).putExtra(
+                            DetailSeriesActivity.SERIES_ARGS,
+                            data
+                        )
                     )
-                )
-            }
-        })
+                }
+            })
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
